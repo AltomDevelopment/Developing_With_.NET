@@ -1,0 +1,30 @@
+App Structure
+-----------------
+-Src 
+------------actions
+|
+|-- api.js (handle all help request)
+|-- dCandidate.js (Redx actions & action creators)
+|-- store.js (configure redux store)
+
+------------components 
+|
+|-- DCandiateForm.js (form operations) - child
+|-- DCandiates.js (list of records) - parent 
+|-- useForm.js (handles common form operations)
+
+-------------reducers
+|-- dCandidate.js
+|-- index.js
+
+-- App.js
+-- index.js
+-- index.css
+
+redux. react redux. redux thunk
+
+action create, update, delete, etc .data
+reducers (action object passed to the reducer)
+store (inside the reducer we will modify the data for the store)
+
+cmpnt -> dispatch(action) -> redcer -> cmpnt 

@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<efcore namespace="MVC_Template" p1:name="TestingDatabaseModel" p1:Guid="5810a661-06e2-4851-ba4e-08da03c51681" xmlns:p1="http://devart.com/schemas/EntityDeveloper/1.0">
+  <class name="CustomerOrderDetail" entity-set="CustomerOrderDetails" table="CustomerOrderDetails" schema="dbo" p1:Guid="dde2cbca-8c2d-49f9-a2fb-d2b407b8506a">
+    <id name="OrderDetailsID" type="Int32" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="064694a5-f13c-43c5-862a-715f90aebe9d">
+      <column name="OrderDetailsID" not-null="True" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </id>
+    <property name="ProductID" type="Int32" p1:ValidateRequired="true" p1:Guid="3eb94baa-ccf2-40b6-8a55-21a9013f67e0">
+      <column name="ProductID" not-null="True" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="ProductQTY" type="Int32" p1:ValidateRequired="true" p1:Guid="ee70ea68-ad21-4bef-81af-1c615e0a8635">
+      <column name="ProductQTY" not-null="True" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="Discount" type="Int32" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="da1a8681-7d31-4469-8d71-4df465dfc616">
+      <column name="Discount" not-null="False" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="Shipcost" type="Decimal" p1:ValidateRequired="true" p1:Guid="6579d0ab-f65d-4c9d-8226-3f070f36d67e">
+      <column name="Shipcost" not-null="True" precision="19" scale="4" sql-type="money" p1:unicode="False" />
+    </property>
+    <property name="OrderTotal" type="Decimal" p1:ValidateRequired="true" p1:Guid="4fa0250d-4b8f-49af-aa0c-e1a9f1921f27">
+      <column name="OrderTotal" not-null="True" precision="19" scale="4" sql-type="money" p1:unicode="False" />
+    </property>
+    <property name="TimeCreated" type="DateTime" p1:ValidateRequired="true" p1:Guid="54512c9b-3f3f-4ed4-b1eb-ada84449558f">
+      <column name="TimeCreated" not-null="True" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="LastModified" type="DateTime" p1:ValidateRequired="true" p1:Guid="5fc74568-3d83-464d-9afc-1f34093d320e">
+      <column name="LastModified" not-null="True" sql-type="datetime" p1:unicode="False" />
+    </property>
+  </class>
+  <class name="CustomerOrder" entity-set="CustomerOrders" table="CustomerOrders" schema="dbo" p1:Guid="869c59c8-fef9-4d1b-b110-af0926dd4776">
+    <id name="OrderID" type="Int32" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="7a44ec7a-9534-41ef-be9e-460068b31805">
+      <column name="OrderID" not-null="True" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </id>
+    <property name="UserID" type="Int32" p1:ValidateRequired="true" p1:Guid="df3b0b34-fb8b-4b35-a955-27b6ac553ed1">
+      <column name="UserID" not-null="True" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="OrderDetailsID" type="Int32" p1:ValidateRequired="true" p1:Guid="da5f9950-b828-474e-9bcc-c60208472ee4">
+      <column name="OrderDetailsID" not-null="True" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="ShipperID" type="Int32" p1:ValidateRequired="true" p1:Guid="0d392c10-50fe-44bc-8a15-25051c249d9c">
+      <column name="ShipperID" not-null="True" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="TrackingInfo" type="String" p1:nullable="True" p1:ValidateMaxLength="500" p1:ValidateRequired="false" p1:Guid="2cf3c95a-28f2-4650-8f8d-29be313c10e8">
+      <column name="TrackingInfo" not-null="False" length="500" sql-type="nvarchar" p1:unicode="True" />
+    </property>
+    <property name="TimeCreated" type="DateTime" p1:ValidateRequired="true" p1:Guid="a9e4c3f3-b12a-4169-9b20-e63272f5d10f">
+      <column name="TimeCreated" not-null="True" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="LastModified" type="DateTime" p1:ValidateRequired="true" p1:Guid="f4d9f8bf-59c8-4d76-814c-24359a176d17">
+      <column name="LastModified" not-null="True" sql-type="datetime" p1:unicode="False" />
+    </property>
+  </class>
+  <class name="Manufacturer" entity-set="Manufacturers" table="Manufacturer" schema="dbo" p1:Guid="fe89bb26-ffa5-470a-bb64-73ee9e18cc2e">
+    <id name="ManufID" type="Int32" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="0dec9787-c9d8-4343-a7c5-fef4157b11e6">
+      <column name="ManufID" not-null="True" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </id>
+    <property name="ManufContactID" type="Int32" p1:ValidateRequired="true" p1:Guid="e5b5734f-53cd-43bb-b66d-28c798668e6b">
+      <column name="ManufContactID" not-null="True" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="ShipperID" type="Int32" p1:ValidateRequired="true" p1:Guid="6016242a-2891-41b2-81f5-65f5523c2018">
+      <column name="ShipperID" not-null="True" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="ManufName" type="String" p1:ValidateMaxLength="500" p1:ValidateRequired="true" p1:Guid="3a618779-675e-44d7-9bd8-24e4b776b047">
+      <column name="ManufName" not-null="True" length="500" sql-type="nvarchar" p1:unicode="True" />
+    </property>
+    <property name="ManufDescr" type="String" p1:nullable="True" p1:ValidateMaxLength="500" p1:ValidateRequired="false" p1:Guid="966d775e-7117-48fe-9641-b4ff16471213">
+      <column name="ManufDescr" not-null="False" length="500" sql-type="nvarchar" p1:unicode="True" />
+    </property>
+    <property name="CurrentlyInUse" type="Boolean" p1:ValidateRequired="true" p1:Guid="db55357e-6deb-4c8c-ac20-21d3580498fe">
+      <column name="CurrentlyInUse" not-null="True" sql-type="bit" p1:unicode="False" />
+    </property>
+    <property name="TimeCreated" type="DateTime" p1:ValidateRequired="true" p1:Guid="287272b1-817e-4d0b-a6cc-ad59d9818c08">
+      <column name="TimeCreated" not-null="True" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="LastModified" type="DateTime" p1:ValidateRequired="true" p1:Guid="2599c672-83b3-4b77-8797-ca3785022621">
+      <column name="LastModified" not-null="True" sql-type="datetime" p1:unicode="False" />
+    </property>
+  </class>
+  <class name="ManufacturerContactInfo" entity-set="ManufacturerContactInfos" table="ManufacturerContactInfo" schema="dbo" p1:Guid="cef8b420-6c37-4f4e-a8a3-04f078362601">
+    <id name="ManufContactID" type="Int32" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="6f3af74d-16b5-4c89-b6da-52ee03722167">
+      <column name="ManufContactID" not-null="True" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </id>
+    <property name="ManufAddress" type="String" p1:nullable="True" p1:ValidateMaxLength="256" p1:ValidateRequired="false" p1:Guid="763533f8-9a1c-40dd-bacd-994bcdb17f35">
+      <column name="ManufAddress" not-null="False" length="256" sql-type="nvarchar" p1:unicode="True" />
+    </property>
+    <property name="ManufPhoneNumber" type="String" p1:nullable="True" p1:ValidateMaxLength="50" p1:ValidateRequired="false" p1:Guid="2c9b68a7-bd40-4b83-81f7-e25b5e6a484f">
+      <column name="ManufPhoneNumber" not-null="False" length="50" sql-type="nvarchar" p1:unicode="True" />
+    </property>
+    <property name="ManufEmail" type="String" p1:nullable="True" p1:ValidateMaxLength="256" p1:ValidateRequired="false" p1:Guid="e6246ed9-39b8-4ec6-a8a2-c9a5c296d9b4">
+      <column name="ManufEmail" not-null="False" length="256" sql-type="nvarchar" p1:unicode="True" />
+    </property>
+    <property name="ManufHourOfOperation" type="String" p1:nullable="True" p1:ValidateMaxLength="500" p1:ValidateRequired="false" p1:Guid="7803038a-4784-48d2-9202-0d76693ac506">
+      <column name="ManufHourOfOperation" not-null="False" length="500" sql-type="nvarchar" p1:unicode="True" />
+    </property>
+    <property name="TimeCreated" type="DateTime" p1:ValidateRequired="true" p1:Guid="22b41cbd-e252-4765-b2c4-3690e8cf71ad">
+      <column name="TimeCreated" not-null="True" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="LastModified" type="DateTime" p1:ValidateRequired="true" p1:Guid="94179229-f316-4ac0-a601-bad7c5d1e60a">
+      <column name="LastModified" not-null="True" sql-type="datetime" p1:unicode="False" />
+    </property>
+  </class>
+  <class name="ManufacturerOrderDetail" entity-set="ManufacturerOrderDetails" table="ManufacturerOrderDetails" schema="dbo" p1:Guid="e9556a44-95e1-4ba6-a540-b51d9e765662">
+    <id name="OrderDetailsID" type="Int32" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="9afcc93b-541c-48ae-95af-8fcac1d3ee84">
+      <column name="OrderDetailsID" not-null="True" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </id>
+    <property name="ManufOrderID" type="Int32" p1:ValidateRequired="true" p1:Guid="b3ef058c-c813-464b-8871-994fad84fd04">
+      <column name="ManufOrderID" not-null="True" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="ShipperID" type="Int32" p1:ValidateRequired="true" p1:Guid="5ad25fd5-aadf-4024-b56e-c6df87f267d6">
+      <column name="ShipperID" not-null="True" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="TrackingInfo" type="String" p1:nullable="True" p1:ValidateMaxLength="500" p1:ValidateRequired="false" p1:Guid="a47db76a-b44c-4dd6-be0b-51b20bf799ec">
+      <column name="TrackingInfo" not-null="False" length="500" sql-type="nvarchar" p1:unicode="True" />
+    </property>
+    <property name="ProductID" type="Int32" p1:ValidateRequired="true" p1:Guid="ca7966b1-c0fc-4f54-b9a8-68552066bf21">
+      <column name="ProductID" not-null="True" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="UnitPrice" type="Decimal" p1:ValidateRequired="true" p1:Guid="5cdd610a-3162-4820-a59b-0f161f0ff9da">
+      <column name="UnitPrice" not-null="True" precision="19" scale="4" sql-type="money" p1:unicode="False" />
+    </property>
+    <property name="ProductQTY" type="Int32" p1:ValidateRequired="true" p1:Guid="9489911d-1cad-438e-b25d-9af355d0724f">
+      <column name="ProductQTY" not-null="True" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="ShipperCost" type="Decimal" p1:ValidateRequired="true" p1:Guid="2986f7c9-52d1-4b10-a522-17e2c738c904">
+      <column name="ShipperCost" not-null="True" precision="19" scale="4" sql-type="money" p1:unicode="False" />
+    </property>
+    <property name="OrderTotal" type="Decimal" p1:ValidateRequired="true" p1:Guid="08934720-ca02-4672-87c2-57703b48a423">
+      <column name="OrderTotal" not-null="True" precision="19" scale="4" sql-type="money" p1:unicode="False" />
+    </property>
+    <property name="TimeCreated" type="DateTime" p1:ValidateRequired="true" p1:Guid="a69fd0c3-682c-41e0-972b-ba5aaa84afdc">
+      <column name="TimeCreated" not-null="True" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="LastModified" type="DateTime" p1:ValidateRequired="true" p1:Guid="997b01a3-6f49-40d6-8529-bdc67ed54f2d">
+      <column name="LastModified" not-null="True" sql-type="datetime" p1:unicode="False" />
+    </property>
+  </class>
+  <class name="ManufacturerOrder" entity-set="ManufacturerOrders" table="ManufacturerOrders" schema="dbo" p1:Guid="72d0734c-15ab-4ae4-ac87-c2063d8f6767">
+    <id name="ManufOrderID" type="Int32" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="e861fe08-4a6e-43ba-8917-8d5d28a824d9">
+      <column name="ManufOrderID" not-null="True" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </id>
+    <property name="OrderDetailsID" type="Int32" p1:ValidateRequired="true" p1:Guid="d541f839-cc68-47ac-b97f-9b164d025b4b">
+      <column name="OrderDetailsID" not-null="True" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="OrderName" type="String" p1:ValidateMaxLength="500" p1:ValidateRequired="true" p1:Guid="c5bd2b9b-8783-47c2-bc67-d189f71f2e34">
+      <column name="OrderName" not-null="True" length="500" sql-type="nvarchar" p1:unicode="True" />
+    </property>
+    <property name="OrderDescr" type="String" p1:nullable="True" p1:ValidateMaxLength="500" p1:ValidateRequired="false" p1:Guid="51295d71-f640-4f91-887e-5da247a32f07">
+      <column name="OrderDescr" not-null="False" length="500" sql-type="nvarchar" p1:unicode="True" />
+    </property>
+    <property name="TimeCreated" type="DateTime" p1:ValidateRequired="true" p1:Guid="ea55cb5f-367c-48db-8249-633d538a9ede">
+      <column name="TimeCreated" not-null="True" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="LastModified" type="DateTime" p1:ValidateRequired="true" p1:Guid="be80395a-11de-430d-99ea-0cd65b24b2b4">
+      <column name="LastModified" not-null="True" sql-type="datetime" p1:unicode="False" />
+    </property>
+  </class>
+  <class name="ProductCategory" entity-set="ProductCategories" table="ProductCategory" schema="dbo" p1:Guid="558c47be-fd5e-4426-a5c7-5349a1ff82e5">
+    <id name="CategoryID" type="Int32" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="b5df3978-0001-453a-b2a2-87e8a0f514cd">
+      <column name="CategoryID" not-null="True" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </id>
+    <property name="CategoryName" type="String" p1:ValidateMaxLength="250" p1:ValidateRequired="true" p1:Guid="ec2c9efd-e3e6-4d87-8dcf-650049774461">
+      <column name="CategoryName" not-null="True" length="250" sql-type="nvarchar" p1:unicode="True" />
+    </property>
+    <property name="CategoryDescr" type="String" p1:nullable="True" p1:ValidateMaxLength="500" p1:ValidateRequired="false" p1:Guid="2b04eef9-fd2d-40fd-8175-40e9129169d0">
+      <column name="CategoryDescr" not-null="False" length="500" sql-type="nvarchar" p1:unicode="True" />
+    </property>
+    <property name="TimeCreated" type="DateTime" p1:ValidateRequired="true" p1:Guid="006e50cc-7ed2-4ccd-b622-246f95b8a255">
+      <column name="TimeCreated" not-null="True" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="LastModified" type="DateTime" p1:ValidateRequired="true" p1:Guid="ea00222a-d87c-4111-9b1c-7b094e575a85">
+      <column name="LastModified" not-null="True" sql-type="datetime" p1:unicode="False" />
+    </property>
+  </class>
+  <class name="Product" entity-set="Products" table="Products" schema="dbo" p1:Guid="31b77a4f-526d-4687-ba10-1570a6788eef">
+    <id name="ProductID" type="Int32" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="cffb6d15-3f84-4e19-9bdf-711447477bc9">
+      <column name="ProductID" not-null="True" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </id>
+    <property name="ProductName" type="String" p1:ValidateMaxLength="250" p1:ValidateRequired="true" p1:Guid="b2cbadf3-21e7-4502-84a5-88aa1d1af3e9">
+      <column name="ProductName" not-null="True" length="250" sql-type="nvarchar" p1:unicode="True" />
+    </property>
+    <property name="ProductDescr" type="String" p1:nullable="True" p1:ValidateMaxLength="500" p1:ValidateRequired="false" p1:Guid="c2855f7b-4bec-40ec-aa52-7f7694bbc795">
+      <column name="ProductDescr" not-null="False" length="500" sql-type="nvarchar" p1:unicode="True" />
+    </property>
+    <property name="CategoryID" type="Int32" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="e2a10c21-3a62-482d-89c7-47134622baf9">
+      <column name="CategoryID" not-null="False" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="Unitprice" type="Decimal" p1:ValidateRequired="true" p1:Guid="261ae0c8-6c5c-4817-bd97-a85c7ff26f20">
+      <column name="Unitprice" not-null="True" precision="19" scale="4" sql-type="money" p1:unicode="False" />
+    </property>
+    <property name="Discontinued" type="Boolean" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="7db19939-dd8f-45dd-9d0b-dd5e15afd5b9">
+      <column name="Discontinued" not-null="False" sql-type="bit" p1:unicode="False" />
+    </property>
+    <property name="DiscountAmount" type="Int32" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="c382fe3e-2fcb-4641-a781-cfa609cf8d61">
+      <column name="DiscountAmount" not-null="False" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="ManufacturerOrderID" type="Int32" p1:ValidateRequired="true" p1:Guid="a60e3e49-992a-4685-95dc-685fcca3a98e">
+      <column name="ManufacturerOrderID" not-null="True" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="ProductWeight" type="Int32" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="2c2ad976-d32c-4f43-a233-f07191fbd053">
+      <column name="ProductWeight" not-null="False" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="ShipperID" type="Int32" p1:ValidateRequired="true" p1:Guid="9c7fb6cc-8e0d-4757-b3dc-2856f443848f">
+      <column name="ShipperID" not-null="True" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="TimeCreated" type="DateTime" p1:ValidateRequired="true" p1:Guid="799208bf-fc46-4f83-8bc7-66f246d220c2">
+      <column name="TimeCreated" not-null="True" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="LastModified" type="DateTime" p1:ValidateRequired="true" p1:Guid="56189eee-8ca5-4047-9fff-68b056161bbc">
+      <column name="LastModified" not-null="True" sql-type="datetime" p1:unicode="False" />
+    </property>
+  </class>
+  <class name="ProductShipper" entity-set="ProductShippers" table="ProductShippers" schema="dbo" p1:Guid="8af3c4a7-7077-4500-9882-8ab49020e0d8">
+    <id name="ShipperID" type="Int32" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="453166b9-b468-4b6e-a67d-8af2fd33c533">
+      <column name="ShipperID" not-null="True" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </id>
+    <property name="ShipperName" type="String" p1:ValidateMaxLength="256" p1:ValidateRequired="true" p1:Guid="fa0a19d8-f076-4d51-aee3-7bb707897ed3">
+      <column name="ShipperName" not-null="True" length="256" sql-type="nvarchar" p1:unicode="True" />
+    </property>
+    <property name="TimeCreated" type="DateTime" p1:ValidateRequired="true" p1:Guid="e450cee0-ef64-44e0-a193-d05d06c9b9a5">
+      <column name="TimeCreated" not-null="True" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="LastModified" type="DateTime" p1:ValidateRequired="true" p1:Guid="89a28b2b-2466-4598-9116-e2cc7032d097">
+      <column name="LastModified" not-null="True" sql-type="datetime" p1:unicode="False" />
+    </property>
+  </class>
+  <class name="User" entity-set="Users" table="Users" schema="dbo" p1:Guid="75c9bc84-d69c-485c-a124-5387efd191eb">
+    <id name="UserId" type="Int32" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="062c5cfd-d23d-4a3f-a9d5-3b0940c18829">
+      <column name="UserId" not-null="True" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </id>
+    <property name="FirstName" type="String" p1:ValidateMaxLength="100" p1:ValidateRequired="true" p1:Guid="5bd47a5f-fd0c-48e1-a0e2-e641ddb8de57">
+      <column name="FirstName" not-null="True" length="100" sql-type="nvarchar" p1:unicode="True" />
+    </property>
+    <property name="LastName" type="String" p1:ValidateMaxLength="100" p1:ValidateRequired="true" p1:Guid="f4c98f36-c3d5-406d-8bff-5535e0a80141">
+      <column name="LastName" not-null="True" length="100" sql-type="nvarchar" p1:unicode="True" />
+    </property>
+    <property name="UserName" type="String" p1:nullable="True" p1:ValidateMaxLength="256" p1:ValidateRequired="false" p1:Guid="a280597c-7c8f-4961-8546-53bd82d74fef">
+      <column name="UserName" not-null="False" length="256" sql-type="nvarchar" p1:unicode="True" />
+    </property>
+    <property name="NormalizedUserName" type="String" p1:nullable="True" p1:ValidateMaxLength="256" p1:ValidateRequired="false" p1:Guid="8281e7d3-e743-4f57-bd7c-0fcf81129fb8">
+      <column name="NormalizedUserName" not-null="False" length="256" sql-type="nvarchar" p1:unicode="True" />
+    </property>
+    <property name="Email" type="String" p1:nullable="True" p1:ValidateMaxLength="256" p1:ValidateRequired="false" p1:Guid="32233d9c-aa60-47c9-95c5-80cb66acf1dc">
+      <column name="Email" not-null="False" length="256" sql-type="nvarchar" p1:unicode="True" />
+    </property>
+    <property name="NormalizedEmail" type="String" p1:nullable="True" p1:ValidateMaxLength="256" p1:ValidateRequired="false" p1:Guid="bd860ee4-30c5-4721-a3cf-973071ff6b33">
+      <column name="NormalizedEmail" not-null="False" length="256" sql-type="nvarchar" p1:unicode="True" />
+    </property>
+    <property name="EmailConfirmed" type="Boolean" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="e5f54d9b-b73f-449f-bb8f-afbe086b2c0e">
+      <column name="EmailConfirmed" not-null="False" sql-type="bit" p1:unicode="False" />
+    </property>
+    <property name="PasswordHash" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="153c762e-7a93-4fc3-81aa-cc033d9c62bf">
+      <column name="PasswordHash" not-null="False" sql-type="nvarchar(max)" p1:unicode="True" />
+    </property>
+    <property name="PhoneNumber" type="String" p1:nullable="True" p1:ValidateMaxLength="50" p1:ValidateRequired="false" p1:Guid="15b1e716-172c-4c59-81d2-50252f8fe449">
+      <column name="PhoneNumber" not-null="False" length="50" sql-type="nvarchar" p1:unicode="True" />
+    </property>
+    <property name="PhoneNumberConfirmed" type="Boolean" p1:ValidateRequired="true" p1:Guid="66e4daaa-b18b-4517-a969-a8321b852e6a">
+      <column name="PhoneNumberConfirmed" not-null="True" sql-type="bit" p1:unicode="False" />
+    </property>
+    <property name="TwoFactorEnabled" type="Boolean" p1:ValidateRequired="true" p1:Guid="33846c00-e8b4-422b-bd3f-88d49e19ac81">
+      <column name="TwoFactorEnabled" not-null="True" sql-type="bit" p1:unicode="False" />
+    </property>
+    <property name="LockoutEnd" type="DateTimeOffset" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="5d27f507-b376-482f-a95d-d023df823706">
+      <column name="LockoutEnd" not-null="False" sql-type="datetimeoffset" p1:unicode="False" />
+    </property>
+    <property name="LockoutEnabled" type="Boolean" p1:ValidateRequired="true" p1:Guid="07938cc0-1b5b-452e-b68c-ae3ea3bade00">
+      <column name="LockoutEnabled" not-null="True" sql-type="bit" p1:unicode="False" />
+    </property>
+    <property name="IsAdmin" type="Boolean" p1:ValidateRequired="true" p1:Guid="7fafa9bc-2cbf-41f3-bba3-539c7b465f7a">
+      <column name="IsAdmin" not-null="True" sql-type="bit" p1:unicode="False" />
+    </property>
+    <property name="AccessFailedCount" type="Int32" p1:ValidateRequired="true" p1:Guid="588c217d-bc81-4412-ac0c-ebbb7506acce">
+      <column name="AccessFailedCount" not-null="True" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="TimeCreated" type="DateTime" p1:ValidateRequired="true" p1:Guid="96a12ca2-b729-45e8-a3ac-bd357c36e313">
+      <column name="TimeCreated" not-null="True" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="LastModified" type="DateTime" p1:ValidateRequired="true" p1:Guid="d13291c0-43df-4476-8e91-12cd329fedd0">
+      <column name="LastModified" not-null="True" sql-type="datetime" p1:unicode="False" />
+    </property>
+  </class>
+</efcore>

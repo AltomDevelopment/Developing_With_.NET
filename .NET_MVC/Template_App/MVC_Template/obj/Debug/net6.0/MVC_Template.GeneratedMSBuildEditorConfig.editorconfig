@@ -1,0 +1,41 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = MVC_Template
+build_property.RootNamespace = MVC_Template
+build_property.ProjectDir = C:\Users\Altom\Documents\Programming\GithubRepos\Developing_With_.NET\.NET_Core_MVC\Template_App\MVC_Template\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\Altom\Documents\Programming\GithubRepos\Developing_With_.NET\.NET_Core_MVC\Template_App\MVC_Template
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/Altom/Documents/Programming/GithubRepos/Developing_With_.NET/.NET_Core_MVC/Template_App/MVC_Template/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Altom/Documents/Programming/GithubRepos/Developing_With_.NET/.NET_Core_MVC/Template_App/MVC_Template/Views/Login/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Altom/Documents/Programming/GithubRepos/Developing_With_.NET/.NET_Core_MVC/Template_App/MVC_Template/Views/SignUp/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2lnblVwXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Altom/Documents/Programming/GithubRepos/Developing_With_.NET/.NET_Core_MVC/Template_App/MVC_Template/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Altom/Documents/Programming/GithubRepos/Developing_With_.NET/.NET_Core_MVC/Template_App/MVC_Template/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Altom/Documents/Programming/GithubRepos/Developing_With_.NET/.NET_Core_MVC/Template_App/MVC_Template/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-bsng1xrpsy

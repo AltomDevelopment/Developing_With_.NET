@@ -1,0 +1,75 @@
+﻿@model MVC_Template.ViewModel.LoginViewModel
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.84.0">
+    <title>Signin Template · Bootstrap v5.0</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/sign-in/">
+
+    <!-- Bootstrap core CSS -->
+    <link href="/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="/docs/5.0/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/docs/5.0/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/docs/5.0/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="manifest" href="/docs/5.0/assets/img/favicons/manifest.json">
+    <link rel="mask-icon" href="/docs/5.0/assets/img/favicons/safari-pinned-tab.svg" color="#7952b3">
+    <link rel="icon" href="/docs/5.0/assets/img/favicons/favicon.ico">
+
+    <meta name="theme-color" content="#7952b3">
+    
+    <!-- Custom styles for this template -->
+    <link href="/css/Signin.css" rel="stylesheet">
+
+  </head>
+<body class="text-center" class="preload">
+    
+    <main class="form-signin">
+        @using (Html.BeginForm("Authorize", "Login", FormMethod.Post))
+        {
+            <div class="col">
+              <div class="card mb-4 rounded-3 shadow-sm">
+                <div class="card-header py-3">
+                <h2 class="h3 mb-3 fw-normal">Login</h2>
+                </div>
+                  <div class="card-body">
+                    <div class="form-floating-email-input">
+                    @Html.EditorFor(m => m.EmailAddress, new { htmlAttributes = new { placeholder = "Email Address                       @" } })
+                    <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</button>
+                    <ul class="dropdown-menu">
+                       <li><a class="dropdown-item">Gmail.com</a></li>
+                       <li><a class="dropdown-item">Outlook.com</a></li>
+                       <li><a class="dropdown-item">Yahoo.com</a></li>
+                    </ul>
+                    </div>
+                    <div class="form-floating">
+                    @Html.EditorFor(m => m.PassWord, new { htmlAttributes = new { placeholder = "Password" } })
+                    </div>
+                    <div class="checkbox mb-3">
+                    <input class="check" type="checkbox" value="remember-me">
+                    <p>Remember Me</p>
+                    </div>
+                      <button type="submit" class="btn btn-outline-primary">Submit</button>
+                      <p class="mt-5 mb-3 text-muted">&copy; 2023</p>
+                        <p>@Html.DisplayFor(m => m.LoginErrorMessage)</p>
+                  </div>
+              </div>
+            </div>
+        }
+    </main>
+    </body>
+
+    <!-- Scripts for the Page -->
+    <script src="/lib/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script>
+    $(window).load(function() {
+      $("body").removeClass("preload");
+    });
+    </script>
+</html>
